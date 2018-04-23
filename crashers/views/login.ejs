@@ -1,53 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/login-style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  <title>Tight Spot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/registration.css">
+  <title>Crasher Login</title>
 </head>
 
 <body>
-  <section id="main-wrapper">
-    <section class="left-container">
-      <a href="/">
-        <span class="logo"> Tight Spot</span>
-  <h3 class="white-text">
-Helping you find your next home
-</h3>
-  </a>
-    </section>
-    <section class="right-container-login">
-
-      <h1 class="login-text">Login</h1>
-
-      <% if (message.length > 0) { %>
-        <div class="alert alert-danger">
-          <%= message %>
-        </div>
-        <% } %>
-
-          <form action="/login" method="POST">
-            <fieldset>
-              <legend> Email Address </legend>
-              <input class="loginInput" placeholder="Email" type="text" name="email">
-            </fieldset>
-            <fieldset>
-              <legend> Password</legend>
-              <input class="loginInput" placeholder="Password" type="password" name="password">
-            </fieldset>
-            <section id="btn-sec">
-              <button id="loginBtn" type="submit" name="button">
-              Log in <i class="fas fa-arrow-right"></i>
-            </button>
-          </form>
-          <a href="#" class="forgotPassword">Forgot password?</a>
-          <h5><a href="/signup">Don't have an account?</a></h5>
-          </section>
-    </section>
-  </section>
+  <h1>Crasher</h1>
+  <form class="" action="index.html" method="post">
+    <input type="text" name="" placeholder="Username/Email">
+    <input type="password" name="" placeholder="Password">
+    <input type="submit" name="" value="Submit">
+  </form>
+  <span>Not a member yet? <a href="signup">Signup</a></span>
 </body>
 
 </html>
