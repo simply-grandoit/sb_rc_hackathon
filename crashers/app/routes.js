@@ -81,7 +81,10 @@ module.exports = function(app, passport, db, ObjectId) {
   // show the login form
   app.get('/login', function(req, res) {
     res.render('login.ejs', {
-      crash: req.flash('loginMessage')
+
+
+      crash: req.flash('logincrash')
+
     });
   });
 
