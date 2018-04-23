@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Ads</title>
+  <metaname="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+  </header>
+
+  <ul id="adsList">
+
+
+
+    <h2 class="ad-text">General Post</h2>
+    <% for(var i=0; i<crash.length; i++) {%>
+
+      <li class="message ">
+        <h3>
+          <%= crash[i].title %>
+        </h3>
+       <a href="<%= crash[i].url %>">
+          <%= crash[i].url %>
+          </a>
+        <h4><%= crash[i].address %></h4>
+        <h5><%= crash[i].date %></h5>
+        <h5><%= crash[i].time %></h5>
+        <p><%= crash[i].description %></p>
+
+
+      </li>
+      <% } %>
+  </ul>
+
+  <ul id="adsList">
+
+    <h2 class="ad-text">House Post</h2>
+    <% for(var i=0; i<message.length; i++) {%>
+      <li class="message ">
+        <h3>
+          <%= crash[i].title %>
+        </h3>
+         <a href="<%= crash[i].url %>">
+           <%= crash[i].url %>
+           </a>
+        <h4><%= crash[i].address %></h4>
+        <h5><%= crash[i].date %></h5>
+        <h5><%= crash[i].time %></h5>
+        <p><%= crash[i].description %></p>
+      </li>
+      <% } %>
+  </ul>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
