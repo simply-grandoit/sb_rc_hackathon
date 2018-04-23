@@ -12,15 +12,19 @@
   </header>
 
   <ul id="adsList">
-    <h2 class="ad-text">Post for All</h2>
+
+
+
+    <h2 class="ad-text">General Post</h2>
     <% for(var i=0; i<crash.length; i++) {%>
+
       <li class="message ">
         <h3>
           <%= crash[i].title %>
         </h3>
-
+       <a href="<%= crash[i].url %>">
           <%= crash[i].url %>
-
+          </a>
         <h4><%= crash[i].address %></h4>
         <h5><%= crash[i].date %></h5>
         <h5><%= crash[i].time %></h5>
@@ -32,15 +36,16 @@
   </ul>
 
   <ul id="adsList">
-    <h2 class="ad-text">Post for House</h2>
-    <% for(var i=0; i<crash.length; i++) {%>
+
+    <h2 class="ad-text">House Post</h2>
+    <% for(var i=0; i<message.length; i++) {%>
       <li class="message ">
         <h3>
           <%= crash[i].title %>
         </h3>
-
-          <%= crash[i].url %>
-
+         <a href="<%= crash[i].url %>">
+           <%= crash[i].url %>
+           </a>
         <h4><%= crash[i].address %></h4>
         <h5><%= crash[i].date %></h5>
         <h5><%= crash[i].time %></h5>
