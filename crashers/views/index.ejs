@@ -13,14 +13,14 @@
 
   <ul id="adsList">
     <h2 class="ad-text">Post for All</h2>
-    <% for(var i=0; i<message.length; i++) {%>
+    <% for(var i=0; i<crash.length; i++) {%>
       <li class="message ">
         <h3>
           <%= crash[i].title %>
         </h3>
-        <a href="/posting/<%=message[i]._id%>">
+
           <%= crash[i].url %>
-        </a>
+
         <h4><%= crash[i].address %></h4>
         <h5><%= crash[i].date %></h5>
         <h5><%= crash[i].time %></h5>
@@ -33,14 +33,14 @@
 
   <ul id="adsList">
     <h2 class="ad-text">Post for House</h2>
-    <% for(var i=0; i<message.length; i++) {%>
+    <% for(var i=0; i<crash.length; i++) {%>
       <li class="message ">
         <h3>
           <%= crash[i].title %>
         </h3>
-        <a href="/posting/<%=message[i]._id%>">
+
           <%= crash[i].url %>
-        </a>
+
         <h4><%= crash[i].address %></h4>
         <h5><%= crash[i].date %></h5>
         <h5><%= crash[i].time %></h5>

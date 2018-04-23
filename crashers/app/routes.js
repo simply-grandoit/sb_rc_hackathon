@@ -4,47 +4,47 @@ module.exports = function(app, passport, db, ObjectId) {
 
   // show the home page (will also have our login links)
   app.get('/', function(req, res) {
-    db.collection('message').find().toArray((err, result) => {
+    db.collection('crash').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('index.ejs', {
-        message: result
+        crash: result
       })
     })
   });
 
-  app.get('/about', function(req, res) {
-    db.collection('message').find().toArray((err, result) => {
+  app.get('/profile', function(req, res) {
+    db.collection('crash').find().toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('about.ejs', {
-        message: result
+      res.render('profile.ejs', {
+        crash: result
       })
     })
   });
 
-  app.get('/posting/:id', function(req, res) {
-    uId = ObjectId(req.params.id)
-    db.collection('message').findOne({
-      "_id": uId
-    }, (err, result) => {
-      if (err) return console.log(err)
-      res.render('ad-post.ejs', {
-        message: result
-      })
-    })
-  });
+  // app.get('/posting/:id', function(req, res) {
+  //   uId = ObjectId(req.params.id)
+  //   db.collection('message').findOne({
+  //     "_id": uId
+  //   }, (err, result) => {
+  //     if (err) return console.log(err)
+  //     res.render('ad-post.ejs', {
+  //       message: result
+  //     })
+  //   })
+  // });
 
 
 
   // PROFILE SECTION =========================
-  app.get('/profile', isLoggedIn, function(req, res) {
-    db.collection('message').find().toArray((err, result) => {
-      if (err) return console.log(err)
-      res.render('profile.ejs', {
-        user: req.user,
-        message: result
-      })
-    })
-  });
+  // app.get('/profile', isLoggedIn, function(req, res) {
+  //   db.collection('crash').find().toArray((err, result) => {
+  //     if (err) return console.log(err)
+  //     res.render('profile.ejs', {
+  //       user: req.user,
+  //       crash: result
+  //     })
+  //   })
+  // });
 
 
 
@@ -56,19 +56,14 @@ module.exports = function(app, passport, db, ObjectId) {
 
   // message board routes ===============================================================
 
-  app.post('/message', (req, res) => {
-    db.collection('message').save({
-      adTitle: req.body.adTitle,
-      zip: req.body.zip,
-      textArea: req.body.textArea,
-      sqFeet: req.body.sqFeet,
-      minimum: req.body.minimum,
-      maximum: req.body.maximum,
-      pets: req.body.pets,
-      family: req.body.family,
-      email: req.body.email,
-      contact: req.body.contact,
-      phone: req.body.type
+  app.post('/crash', (req, res) => {
+    db.collection('crash').save({
+      title: req.body.title,
+      location: req.body.location,
+      url: req.body.url,
+      time: req.body.time,
+      date: req.body.date,
+      description: req.body.description
     }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
@@ -86,7 +81,7 @@ module.exports = function(app, passport, db, ObjectId) {
   // show the login form
   app.get('/login', function(req, res) {
     res.render('login.ejs', {
-      message: req.flash('loginMessage')
+      crash: req.flash('loginMessage')
     });
   });
 
@@ -101,7 +96,7 @@ module.exports = function(app, passport, db, ObjectId) {
   // show the signup form
   app.get('/signup', function(req, res) {
     res.render('signup.ejs', {
-      message: req.flash('signupMessage')
+      crash: req.flash('signupMessage')
     });
   });
 
