@@ -63,7 +63,8 @@ module.exports = function(app, passport, db, ObjectId) {
       url: req.body.url,
       time: req.body.time,
       date: req.body.date,
-      description: req.body.description
+      description: req.body.description,
+      group: req.body.optradio
     }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
