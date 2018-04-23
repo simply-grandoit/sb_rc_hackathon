@@ -1,0 +1,64 @@
+/*----------------Landing Page Styles---------------------------------*/
+
+section.chat {
+  border: 2px solid black;
+  background-color: #ed1b24;
+  margin-bottom: 20px;
+}
+
+section.chat ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section.chat ul li {
+  border: 1px solid black;
+  margin:10px 50px;
+}
+
+section.chat ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+section.chat ul h2 {
+  text-align: center;
+}
+
+section.chat ul h3 {
+  font-weight: bold;
+}
+
+section.chat ul h4 {
+
+}
+
+section.chat ul h5 {
+  display: inline;
+}
+
+.landing_page {
+  /* background-image: url("../img/rcLogo.png");
+  background-size: cover; */
+  background-color: #21262d;
+}
+
+.general.chat {
+  height: 300px;
+  overflow: scroll;
+}
+
+.house.chat {
+  height: 375px;
+  overflow: scroll;
+}
+
+/*-------------Profile Page/ Form Styles -----------------------------*/
+
+form.form_input {
+  width: 70%;
+}
+
+input#postTitle {
+  width: 100%;
+}
