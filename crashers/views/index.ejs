@@ -13,47 +13,41 @@
 
   <section class="general chat">
     <ul id="adsList">
-
       <h2 class="ad-text">General Post</h2>
-      <% for(var i=0; i<crash.length; i++) {%>
-
-        <li class="message ">
-
-         <a href="<%= crash[i].url %>">
-           <h3>
-             <%= crash[i].title %>
-           </h3>
-            </a>
-          <h4><%= crash[i].location %></h4>
-          <h5><%= crash[i].date %></h5>
-          <h5><%= crash[i].time %></h5>
-          <p><%= crash[i].description %></p>
-
-        </li>
+      <% for(var i=crash.length-1; i>0; i--) {%>
+        <% if (crash[i].group==0) { %>
+          <li class="message ">
+              <h3><%= crash[i].title %></h3>
+              <a href="#"><%= crash[i].url %></a>
+              <h4><%= crash[i].address %></h4>
+              <h5><%= crash[i].date %></h5>
+              <h5><%= crash[i].time %></h5>
+              <p><%= crash[i].description %></p>
+              <b><%= crash[i].group %></b>
+          </li>
+        <% } %>
         <% } %>
     </ul>
   </section>
 
   <section class="house chat">
     <ul id="adsList">
-
       <h2 class="ad-text">House Post</h2>
-      <% for(var i=0; i<crash.length; i++) {%>
-        <li class="message ">
-          <a href="<%= crash[i].url %>">
-            <h3>
-              <%= crash[i].title %>
-            </h3>
-             </a>
-          <h4><%= crash[i].location %></h4>
-          <h5><%= crash[i].date %></h5>
-          <h5><%= crash[i].time %></h5>
-          <p><%= crash[i].description %></p>
-        </li>
+      <% for(var i=crash.length-1; i>0; i--) {%>
+        <% if (crash[i].group==1) { %>
+          <li class="message ">
+              <h3><%= crash[i].title %></h3>
+              <a href="#"><%= crash[i].url %></a>
+              <h4><%= crash[i].address %></h4>
+              <h5><%= crash[i].date %></h5>
+              <h5><%= crash[i].time %></h5>
+              <p><%= crash[i].description %></p>
+              <b><%= crash[i].group %></b>
+          </li>
+        <% } %>
         <% } %>
     </ul>
   </section>
-
 
   <script src="main.js"></script>
 </body>
