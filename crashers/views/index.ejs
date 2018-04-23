@@ -7,53 +7,47 @@
   <metaname="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="landing_page">
   <header>
   </header>
 
-  <ul id="adsList">
+  <section class="general chat">
+    <ul id="adsList">
+      <h2 class="ad-text">General Post</h2>
+      <% for(var i=crash.length-1; i>0; i--) {%>
+        <% if (crash[i].group==0) { %>
+          <li class="message ">
+              <h3><%= crash[i].title %></h3>
+              <a href="#"><%= crash[i].url %></a>
+              <h4><%= crash[i].address %></h4>
+              <h5><%= crash[i].date %></h5>
+              <h5><%= crash[i].time %></h5>
+              <p><%= crash[i].description %></p>
+              <b><%= crash[i].group %></b>
+          </li>
+        <% } %>
+        <% } %>
+    </ul>
+  </section>
 
-
-
-    <h2 class="ad-text">General Post</h2>
-    <% for(var i=0; i<crash.length; i++) {%>
-
-      <li class="message ">
-        <h3>
-          <%= crash[i].title %>
-        </h3>
-       <a href="<%= crash[i].url %>">
-          <%= crash[i].url %>
-          </a>
-        <h4><%= crash[i].address %></h4>
-        <h5><%= crash[i].date %></h5>
-        <h5><%= crash[i].time %></h5>
-        <p><%= crash[i].description %></p>
-
-
-      </li>
-      <% } %>
-  </ul>
-
-  <ul id="adsList">
-
-    <h2 class="ad-text">House Post</h2>
-    <% for(var i=0; i<message.length; i++) {%>
-      <li class="message ">
-        <h3>
-          <%= crash[i].title %>
-        </h3>
-         <a href="<%= crash[i].url %>">
-           <%= crash[i].url %>
-           </a>
-        <h4><%= crash[i].address %></h4>
-        <h5><%= crash[i].date %></h5>
-        <h5><%= crash[i].time %></h5>
-        <p><%= crash[i].description %></p>
-      </li>
-      <% } %>
-  </ul>
-
+  <section class="house chat">
+    <ul id="adsList">
+      <h2 class="ad-text">House Post</h2>
+      <% for(var i=crash.length-1; i>0; i--) {%>
+        <% if (crash[i].group==1) { %>
+          <li class="message ">
+              <h3><%= crash[i].title %></h3>
+              <a href="#"><%= crash[i].url %></a>
+              <h4><%= crash[i].address %></h4>
+              <h5><%= crash[i].date %></h5>
+              <h5><%= crash[i].time %></h5>
+              <p><%= crash[i].description %></p>
+              <b><%= crash[i].group %></b>
+          </li>
+        <% } %>
+        <% } %>
+    </ul>
+  </section>
 
   <script src="main.js"></script>
 </body>
