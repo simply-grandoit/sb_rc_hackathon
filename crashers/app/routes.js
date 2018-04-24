@@ -12,14 +12,7 @@ module.exports = function(app, passport, db, ObjectId) {
     })
   });
 
-  // app.get('/profile', function(req, res) {
-  //   db.collection('crash').find().toArray((err, result) => {
-  //     if (err) return console.log(err)
-  //     res.render('profile.ejs', {
-  //       crash: result
-  //     })
-  //   })
-  // });
+
 
   // app.get('/posting/:id', function(req, res) {
   //   uId = ObjectId(req.params.id)
@@ -64,7 +57,8 @@ module.exports = function(app, passport, db, ObjectId) {
       time: req.body.time,
       date: req.body.date,
       description: req.body.description,
-      group: req.body.optradio
+      optradio: req.body.optradio,
+      address: req.body.address
     }, (err, result) => {
       if (err) return console.log(err)
       console.log('saved to database')
@@ -91,7 +85,7 @@ module.exports = function(app, passport, db, ObjectId) {
 
   // process the login form
   app.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/profile', // redirect to the secure profile section
+    successRedirect: '/', // redirect to the secure profile section
     failureRedirect: '/login', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash crashs
   }));
@@ -100,16 +94,16 @@ module.exports = function(app, passport, db, ObjectId) {
   // show the signup form
   app.get('/signup', function(req, res) {
     res.render('signup.ejs', {
-      crash: req.flash('signupMessage')
+    crash: req.flash('signupMessage')
     });
   });
 
   // process the signup form
   app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile', // redirect to the secure profile section
+    successRedirect: '/', // redirect to the secure profile section
     failureRedirect: '/signup', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash crashs
-  }));
+
 
   // =============================================================================
   // UNLINK ACCOUNTS =============================================================
