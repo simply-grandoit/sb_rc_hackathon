@@ -105,3 +105,46 @@ body.form_page {
   width: 48%;
   display: inline;
 }
+
+/*--------------------------Login Page Styles-----------------------*/
+
+body.login_page, body.signup_page {
+  background-image: url("../img/rcLogoRed.png");
+  background-size: contain;
+}
+
+section.login_form, section.signup_form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  width: 40%;
+  min-height: 300px;
+  margin: 140px auto;
+  color: white;
+  text-align: center;
+}
+
+section.login_form h1, section.signup_form h1 {
+  margin-top: 10px;
+}
+
+section.login_form input, section.signup_form input {
+  width: 90%;
+  height: 40px;
+}
+
+section.login_form form input.submit_btn, section.signup_form form input.submit_btn {
+  margin: 20px auto;
+  font-size: 20px;
+  width: 80px;
+  height: 30px;
+}
+
+section.login_form a, section.signup_form a {
+  display: block;
+  background-color: white;
+  color: black;
+  width: 30%;
+  padding: 10px;
+  margin: 10px auto;
+}
