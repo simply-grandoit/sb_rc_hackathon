@@ -7,26 +7,11 @@ module.exports = function(app, passport, db, ObjectId) {
     db.collection('crash').find().toArray((err, result) => {
       if (err) return console.log(err)
       res.render('index.ejs', {
-        crash: result
+        crash: result,
+        user: req.user
       })
     })
   });
-
-
-
-  // app.get('/posting/:id', function(req, res) {
-  //   uId = ObjectId(req.params.id)
-  //   db.collection('crash').findOne({
-  //     "_id": uId
-  //   }, (err, result) => {
-  //     if (err) return console.log(err)
-  //     res.render('ad-post.ejs', {
-  //       crash: result
-  //     })
-  //   })
-  // });
-
-
 
   // PROFILE SECTION
   app.get('/profile', isLoggedIn, function(req, res) {
@@ -57,7 +42,8 @@ module.exports = function(app, passport, db, ObjectId) {
       time: req.body.time,
       date: req.body.date,
       description: req.body.description,
-      optradio: req.body.optradio,
+      house: req.body.house,
+      general: req.body.general,
       address: req.body.address
     }, (err, result) => {
       if (err) return console.log(err)
@@ -104,6 +90,7 @@ module.exports = function(app, passport, db, ObjectId) {
     failureRedirect: '/signup', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash crashs
 
+}));
 
   // =============================================================================
   // UNLINK ACCOUNTS =============================================================
@@ -122,7 +109,7 @@ module.exports = function(app, passport, db, ObjectId) {
     });
   });
 
-};
+
 
 // route middleware to ensure user is logged in
 function isLoggedIn(req, res, next) {
@@ -130,4 +117,6 @@ function isLoggedIn(req, res, next) {
     return next();
 
   res.redirect('/');
+}
+
 }
