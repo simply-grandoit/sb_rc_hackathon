@@ -10,7 +10,7 @@
     <script src="main.js"></script>
 </head>
 
-<body>
+<body class="form_page">
   <header>
 
   </header>
@@ -18,17 +18,16 @@
   <section id="postArea">
     <section id="inputSection">
 
-        <h1>Write post here</h1>
+        <h1>Post The Event</h1>
         <form class="form_input" action="/crash" method="post">
 
-          <input id="postTitle" placeholder="title" type="text" name="title" value="">
-          <input type="text" placeholder="location" name="address" value="">
-          <input type="text" name="url" value="" placeholder="URL">
-          <input type="text" name="time" value="" placeholder="time">
-          <input type="text" name="date" id="" placeholder="date">
-          <textarea name="description" rows="8" cols="80"></textarea>
+          <input id="postTitle" class="long" placeholder="title" type="text" name="title" value="">
+          <input type="text" class="long" placeholder="location" name="address" value="">
+          <input type="text" class="long" name="url" value="" placeholder="URL">
+          <input type="text" name="time" class="short" value="" placeholder="time">
+          <input type="text" name="date" class="short" id="" placeholder="date">
+          <textarea name="description" placeholder="Description" rows="8" cols="125"></textarea>
 
-        <button type="submit" name="button">Submit</button>
         <fieldset>
 
         <label class="radio-inline">General</label>
@@ -38,6 +37,8 @@
         <input type="radio" name="house" value="1">
 
         </fieldset>
+
+        <button type="submit" name="button">Submit</button>
         </form>
 
     </section>
