@@ -12,14 +12,14 @@ module.exports = function(app, passport, db, ObjectId) {
     })
   });
 
-  app.get('/profile', function(req, res) {
-    db.collection('crash').find().toArray((err, result) => {
-      if (err) return console.log(err)
-      res.render('profile.ejs', {
-        crash: result
-      })
-    })
-  });
+  // app.get('/profile', function(req, res) {
+  //   db.collection('crash').find().toArray((err, result) => {
+  //     if (err) return console.log(err)
+  //     res.render('profile.ejs', {
+  //       crash: result
+  //     })
+  //   })
+  // });
 
   // app.get('/posting/:id', function(req, res) {
   //   uId = ObjectId(req.params.id)
@@ -35,16 +35,16 @@ module.exports = function(app, passport, db, ObjectId) {
 
 
 
-  // PROFILE SECTION =========================
-  // app.get('/profile', isLoggedIn, function(req, res) {
-  //   db.collection('crash').find().toArray((err, result) => {
-  //     if (err) return console.log(err)
-  //     res.render('profile.ejs', {
-  //       user: req.user,
-  //       crash: result
-  //     })
-  //   })
-  // });
+  // PROFILE SECTION 
+  app.get('/profile', isLoggedIn, function(req, res) {
+    db.collection('crash').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('profile.ejs', {
+        user: req.user,
+        crash: result
+      })
+    })
+  });
 
 
 
