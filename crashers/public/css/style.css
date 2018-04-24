@@ -1,5 +1,9 @@
 /*----------------Landing Page Styles---------------------------------*/
 
+header nav ul {
+  list-style: none;
+}
+
 a.new_post {
   text-align: center;
   display: block;
@@ -42,11 +46,23 @@ section.chat ul h3 {
 }
 
 section.chat ul h4 {
-
 }
 
 section.chat ul h5 {
   display: inline;
+  float: right;
+  clear: both;
+  margin-top: -20%;
+  margin-right: 5%;
+}
+
+section.chat ul h5:nth-of-type(even) {
+  margin-top: -17%;
+}
+
+
+section.chat ul p {
+  clear: both;
 }
 
 .landing_page {
@@ -106,7 +122,7 @@ body.form_page {
   display: inline;
 }
 
-/*--------------------------Login Page Styles-----------------------*/
+/*--------------------------Login Page and Sign Up Styles-----------------------*/
 
 body.login_page, body.signup_page {
   background-image: url("../img/rcLogoRed.png");
@@ -129,8 +145,17 @@ section.login_form h1, section.signup_form h1 {
 }
 
 section.login_form input, section.signup_form input {
+  display: block;
+  margin: 10px auto;
   width: 90%;
   height: 40px;
+}
+
+section.signup_form input.radio {
+  display: inline;
+  margin: 0 auto;
+  height: 20px;
+  width: 12%;
 }
 
 section.login_form form input.submit_btn, section.signup_form form input.submit_btn {
