@@ -13,6 +13,16 @@ module.exports = function(app, passport, db, ObjectId) {
     })
   });
 
+  app.get('/postings', function(req, res) {
+    db.collection('crash').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('index.ejs', {
+        crash: result,
+        user: req.user
+      })
+    })
+  });
+
   // PROFILE SECTION
   app.get('/profile', isLoggedIn, function(req, res) {
     db.collection('crash').find().toArray((err, result) => {
@@ -71,7 +81,7 @@ module.exports = function(app, passport, db, ObjectId) {
 
   // process the login form
   app.post('/login', passport.authenticate('local-login', {
-    successRedirect: '/', // redirect to the secure profile section
+    successRedirect: '/postings', // redirect to the secure profile section
     failureRedirect: '/login', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash crashs
   }));
@@ -86,7 +96,7 @@ module.exports = function(app, passport, db, ObjectId) {
 
   // process the signup form
   app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/', // redirect to the secure profile section
+    successRedirect: '/postings', // redirect to the secure profile section
     failureRedirect: '/signup', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash crashs
 
