@@ -19,7 +19,6 @@
     <section id="inputSection">
 
         <h1>Write post here</h1>
-
         <form class="form_input" action="/crash" method="post">
           <input id="postTitle" placeholder="title" type="text" name="title" value="">
           <input type="text" placeholder="location" name="address" value="">
@@ -31,7 +30,18 @@
         <button type="submit" name="button">Submit</button>
         <fieldset>
         <label class="radio-inline"><input type="radio" name="optradio" value="0">Cohort</label>
-        <label class="radio-inline"><input type="radio" name="optradio" value="1">House</label>
+          <% if (true) { %>
+            <label class="radio-inline"><input type="radio" name="optradio" value="1">House1</label>
+          <% }
+          else if (false) { %>
+            <label class="radio-inline"><input type="radio" name="optradio" value="2">House2</label>
+          <% }
+          else if (false) { %>
+            <label class="radio-inline"><input type="radio" name="optradio" value="3">House3</label>
+          <% }
+          else if (false) { %>
+            <label class="radio-inline"><input type="radio" name="optradio" value="4">House4</label>
+          <% } %>
         </fieldset>
         </form>
 
