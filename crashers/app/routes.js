@@ -6,7 +6,7 @@ module.exports = function(app, passport, db, ObjectId) {
   app.get('/', function(req, res) {
     db.collection('crash').find().toArray((err, result) => {
       if (err) return console.log(err)
-      res.render('index.ejs', {
+      res.render('login.ejs', {
         crash: result,
         user: req.user
       })
