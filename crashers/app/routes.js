@@ -59,7 +59,7 @@ module.exports = function(app, passport, db, ObjectId) {
   app.post('/crash', (req, res) => {
     db.collection('crash').save({
       title: req.body.title,
-      location: req.body.location,
+      location: req.body.address,
       url: req.body.url,
       time: req.body.time,
       date: req.body.date,
