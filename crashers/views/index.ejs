@@ -11,7 +11,7 @@
   <header>
   <nav>
     <ul>
-      <li><a href="/login">login</a></li>
+      <li><a href="/logout">logout</a></li>
       <li><a href="/signup">sign up</a></li>
     </ul>
   </nav>
@@ -29,6 +29,7 @@
               <h5><%= crash[i].time %></h5>
               <p><%= crash[i].description %></p>
           </li>
+
         <% } %>
 
     </ul>
@@ -36,6 +37,7 @@
 
 <!-- House Cass -->
 <% if (user.house === "cass") {%>
+
   <section class="house chat">
     <ul id="adsList">
       <h2 class="">House Post</h2>
@@ -47,6 +49,7 @@
               <h5><%= crash[i].time %></h5>
               <p><%= crash[i].description %></p>
           </li>
+
         <% } %>
     </ul>
   </section>
@@ -54,17 +57,19 @@
 
 <!-- House Hayden -->
 <% if (user.house === "hayden") {%>
+
   <section class="house chat">
     <ul id="adsList">
       <h2 class="">House Post</h2>
       <% for(var i=crash.length-1; i>0; i--) {%>
           <li class="message ">
-              <h3><a href="<%= crash[i].url %>"><%= crash[i].title %></a></h3>
+              <h3><a href="<%= crash[i].url %>"><%= crash[i].url %></a></h3>
               <h4><%= crash[i].address %></h4>
               <h5><%= crash[i].date %></h5>
               <h5><%= crash[i].time %></h5>
               <p><%= crash[i].description %></p>
           </li>
+
         <% } %>
     </ul>
   </section>
@@ -72,17 +77,19 @@
 
 <!-- House Moses -->
 <% if (user.house === "moses") {%>
+
   <section class="house chat">
     <ul id="adsList">
       <h2 class="">House Post</h2>
       <% for(var i=crash.length-1; i>0; i--) {%>
           <li class="message ">
-              <h3><a href="<%= crash[i].url %>"><%= crash[i].title %></a></h3>
+              <h3><a href="<%= crash[i].url %>"><%= crash[i].url %></a></h3>
               <h4><%= crash[i].address %></h4>
               <h5><%= crash[i].date %></h5>
               <h5><%= crash[i].time %></h5>
               <p><%= crash[i].description %></p>
           </li>
+
         <% } %>
     </ul>
   </section>
@@ -90,18 +97,20 @@
 
 <!-- House Gardner -->
 <% if (user.house === "gardner") {%>
+
   <section class="house chat">
     <ul id="adsList">
       <h2 class="">House Post</h2>
       <% for(var i=crash.length-1; i>0; i--) {%>
           <li class="message ">
-              <h3><a href="<%= crash[i].url %>"><%= crash[i].title %></a></h3>
+              <h3><a href="<%= crash[i].url %>"><%= crash[i].url %></a></h3>
               <h4><%= crash[i].address %></h4>
               <h5><%= crash[i].date %></h5>
               <h5><%= crash[i].time %></h5>
               <p><%= crash[i].description %></p>
           </li>
         <% } %>
+
     </ul>
   </section>
 <% } %>
