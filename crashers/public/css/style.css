@@ -1,5 +1,17 @@
 /*----------------Landing Page Styles---------------------------------*/
 
+a.new_post {
+  text-align: center;
+  display: block;
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 10px;
+  max-width: 150px;
+  margin: 0 auto;
+  background-color: white;
+}
+
 section.chat {
   border: 2px solid black;
   background-color: #ed1b24;
@@ -53,12 +65,16 @@ section.chat ul h5 {
   overflow: scroll;
 }
 
+
+
 /*-------------Profile Page/ Form Styles -----------------------------*/
 
-form.form_input {
-  width: 70%;
+#inputSection h1 {
+  display: block;
+  text-align: center;
 }
 
-input#postTitle {
-  width: 100%;
+#inputSection form {
+  width: 60%;
+  border: 1px solid black;
 }
