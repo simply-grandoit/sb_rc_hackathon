@@ -69,6 +69,11 @@ section.chat ul h5 {
 
 /*-------------Profile Page/ Form Styles -----------------------------*/
 
+#inputSection button {
+  display: block;
+  margin: 0 auto;
+}
+
 #inputSection h1 {
   display: block;
   text-align: center;
@@ -77,4 +82,17 @@ section.chat ul h5 {
 #inputSection form {
   width: 60%;
   border: 1px solid black;
+  margin: 0 auto;
+}
+#inputSection form input{
+  margin: 0 auto;
+}
+
+#inputSection form input.long {
+  width: 98%;
+}
+
+#inputSection form input.short {
+  width: 48%;
+  display: inline;
 }
