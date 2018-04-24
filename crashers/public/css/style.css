@@ -69,9 +69,16 @@ section.chat ul h5 {
 
 /*-------------Profile Page/ Form Styles -----------------------------*/
 
+body.form_page {
+  background-color: #ed1b24;
+}
+
 #inputSection button {
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
+  font-size: 20px;
+  min-width: 80px;
+  min-height: 30px;
 }
 
 #inputSection h1 {
@@ -83,9 +90,11 @@ section.chat ul h5 {
   width: 60%;
   border: 1px solid black;
   margin: 0 auto;
+  padding: 15px;
 }
 #inputSection form input{
-  margin: 0 auto;
+  margin: 10px auto;
+  height: 40px;
 }
 
 #inputSection form input.long {
