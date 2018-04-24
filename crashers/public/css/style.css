@@ -2,7 +2,21 @@
 
 header nav ul {
   list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 10%;
+  margin-left: 85%;
 }
+
+header nav ul li a {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+
 
 a.new_post {
   text-align: center;
