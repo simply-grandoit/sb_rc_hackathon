@@ -11,7 +11,8 @@
   <header>
   <nav>
     <ul>
-      <li></li>
+      <li><a href="/login">login</a></li>
+      <li><a href="/signup">sign up</a></li>
     </ul>
   </nav>
   </header>
@@ -42,7 +43,8 @@
         <% if (crash[i].group==1) { %>
           <li class="message ">
               <h3><%= crash[i].title %></h3>
-              <a href="#"><%= crash[i].url %></a>
+              <!-- <a href="#"><%= crash[i].url %></a> -->
+              <a href="<%=crash[i].url._id%>">
               <h4><%= crash[i].address %></h4>
               <h5><%= crash[i].date %></h5>
               <h5><%= crash[i].time %></h5>

@@ -35,7 +35,7 @@ module.exports = function(app, passport, db, ObjectId) {
 
 
 
-  // PROFILE SECTION 
+  // PROFILE SECTION
   app.get('/profile', isLoggedIn, function(req, res) {
     db.collection('crash').find().toArray((err, result) => {
       if (err) return console.log(err)
